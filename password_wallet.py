@@ -572,7 +572,10 @@ header{
           <span>Password Generator</span>
           <button class="btn btn-ghost" id="gen-btn" style="padding:.3rem .65rem;font-size:.8rem">⚡ Generate</button>
         </div>
-        <div class="gen-output mono" id="gen-output">—</div>
+        <div style="display:flex;align-items:center;gap:.5rem;justify-content:space-between">
+          <div class="gen-output mono" id="gen-output" data-value="">—</div>
+          <button class="btn btn-ghost" id="show-gen-btn" type="button" style="padding:.3rem .65rem;font-size:.8rem">👁 Show</button>
+        </div>
         <div class="gen-length">
           <span style="width:80px;flex-shrink:0">Length: <strong id="gen-len-val">20</strong></span>
           <input type="range" id="gen-len" min="8" max="64" value="20"/>
@@ -904,8 +907,23 @@ function runGenerator() {
     symbols:document.getElementById("g-sym").checked,
   };
   api("/api/generate", opts).then(r => {
-    document.getElementById("gen-output").textContent = r.password || "—";
+    const output = document.getElementById("gen-output");
+    const password = r.password || "";
+    output.dataset.value = password;
+    output.textContent = password ? "••••••••••••••••" : "—";
+    document.getElementById("show-gen-btn").textContent = password ? "👁 Show" : "👁 Show";
   });
+}
+
+function toggleGeneratedPassword() {
+  const output = document.getElementById("gen-output");
+  const button = document.getElementById("show-gen-btn");
+  const password = output.dataset.value || "";
+  if (!password || password === "—") return;
+
+  const isHidden = output.textContent.includes("•") || output.textContent === "••••••••••••••••";
+  output.textContent = isHidden ? password : "••••••••••••••••";
+  button.textContent = isHidden ? "🙈 Hide" : "👁 Show";
 }
 
 // ── Save entry ────────────────────────────────────────────────────────────────
@@ -1066,8 +1084,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("gen-len-val").textContent = e.target.value;
   });
   document.getElementById("gen-btn").addEventListener("click", runGenerator);
+  document.getElementById("show-gen-btn").addEventListener("click", toggleGeneratedPassword);
   document.getElementById("use-gen-btn").addEventListener("click", () => {
-    const pw = document.getElementById("gen-output").textContent;
+    const pw = document.getElementById("gen-output").dataset.value || "";
     if (pw && pw !== "—") {
       document.getElementById("f-password").value = pw;
       updateStrengthUI(pw);

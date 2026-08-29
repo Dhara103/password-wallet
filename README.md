@@ -170,10 +170,13 @@ Apache License 2.0 — free to use, modify, and distribute under the terms in [`
 
 ---
 
-## 👤 Author
+## 👤 Authors
 
 **Dhara103**
 📧 [dharamittal103@gmail.com](mailto:dharamittal103@gmail.com)
+
+**tanishk-a**
+📧 [tanishka.minghlani01@gamil.com](mailto:tanishka.minghlani01@gamil.com)
 
 ---
 
