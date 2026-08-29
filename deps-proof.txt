@@ -1,0 +1,16 @@
+Zero Dependency proof
+=====================
+
+Runtime imports are Python standard-library modules only.
+
+Verification commands:
+
+    python -m unittest discover -s tests -v
+    python -m py_compile password_wallet.py
+
+Observed result:
+
+    Ran 13 tests
+    OK
+
+The runtime dependency manifest is intentionally empty: requirements.txt has no entries.

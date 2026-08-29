@@ -1,0 +1,18 @@
+test_entry_lifecycle_hides_verifier_and_verifies_password (test_password_wallet.ApiTests.test_entry_lifecycle_hides_verifier_and_verifies_password) ... ok
+test_entry_metadata_rejects_unsafe_types_and_url_schemes (test_password_wallet.ApiTests.test_entry_metadata_rejects_unsafe_types_and_url_schemes) ... ok
+test_invalid_generation_and_missing_entries_return_client_errors (test_password_wallet.ApiTests.test_invalid_generation_and_missing_entries_return_client_errors) ... ok
+test_generator_falls_back_when_no_options_are_selected (test_password_wallet.GeneratorTests.test_generator_falls_back_when_no_options_are_selected) ... ok
+test_generator_handles_disabled_options (test_password_wallet.GeneratorTests.test_generator_handles_disabled_options) ... ok
+test_generator_honors_length_and_character_requirements (test_password_wallet.GeneratorTests.test_generator_honors_length_and_character_requirements) ... ok
+test_legacy_wallet_format_is_rejected (test_password_wallet.StorageTests.test_legacy_wallet_format_is_rejected) ... ok
+test_missing_store_starts_with_empty_vault (test_password_wallet.StorageTests.test_missing_store_starts_with_empty_vault) ... ok
+test_store_round_trip_preserves_verifier_data (test_password_wallet.StorageTests.test_store_round_trip_preserves_verifier_data) ... ok
+test_malformed_verifiers_are_rejected (test_password_wallet.VerificationTests.test_malformed_verifiers_are_rejected) ... ok
+test_master_password_is_not_stored_verbatim (test_password_wallet.VerificationTests.test_master_password_is_not_stored_verbatim) ... ok
+test_master_password_preserves_leading_and_trailing_spaces (test_password_wallet.VerificationTests.test_master_password_preserves_leading_and_trailing_spaces) ... ok
+test_saved_password_uses_a_salted_one_way_verifier (test_password_wallet.VerificationTests.test_saved_password_uses_a_salted_one_way_verifier) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 3.563s
+
+OK
