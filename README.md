@@ -172,8 +172,8 @@ Apache License 2.0 — free to use, modify, and distribute under the terms in [`
 
 ## 👤 Author
 
-**Jafar Tavana**
-📧 [powerinfossl@gmail.com](mailto:powerinfossl@gmail.com)
+**Dhara103**
+📧 [dharamittal103@gmail.com](mailto:dharamittal103@gmail.com)
 
 ---
 
