@@ -74,13 +74,12 @@ The repository includes an intentionally empty `requirements.txt`; there is no p
 
 Vault fits **Track E - Security & Crypto Utilities** as a local password-generation and password-verification tool. It deliberately does not implement custom encryption. Its security boundary is simple and auditable: PBKDF2-HMAC-SHA256 creates one-way verifiers, and the original passwords are discarded after verification.
 
-## Demo Script
+## Demo Video
 
-[`DEMO.md`](DEMO.md) contains a timed five-minute demonstration script covering the launch, vault creation, password generation, CRUD workflow, verifier-only checking, and test evidence.
+https://drive.google.com/file/d/1N3ezWqCR8UaGCL0-CF0HPmtA2P3K9ADT/view?usp=drive_link
 
-> This project is intentionally not a recoverable password database. The app stores one-way verifiers and validates a guessed password against them; it does not expose or reconstruct saved passwords.
+This is the direct access to the demo video were you can see how everything works
 
----
 
 ## 📁 Project Structure
 
