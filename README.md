@@ -178,6 +178,9 @@ Apache License 2.0 — free to use, modify, and distribute under the terms in [`
 **tanishk-a**
 📧 [tanishka.minghlani01@gamil.com](mailto:tanishka.minghlani01@gamil.com)
 
+**radharsh1905-max**
+📧 [Rad.harsh1905@gmail.com](mailto:Rad.harsh1905@gmail.com)
+
 ---
 
 ## 🤝 Contributing
